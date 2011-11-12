@@ -13,3 +13,5 @@ Limitations:
 
 * Only checks the file extensions java, .py, .v, .xml, .c, .h, .pl, .html, .php, .css, .js, .hs, .sql, .m, .mat, .rb, .cpp, .cs, .sh, .as, .scpt
 * Only replaces based on the words and replacements currently defined in the source
+
+WARNING: DO NOT RUN THE PROGRAM ON ITS OWN SOURCE!

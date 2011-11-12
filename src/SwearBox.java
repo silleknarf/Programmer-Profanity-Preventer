@@ -30,7 +30,7 @@ public class SwearBox {
 		swearBox.add(new String[]{"Cunt", "custard pies"});
 		swearBox.add(new String[]{"Scrotum", "bag"});
 		swearBox.add(new String[]{"Wank", "perplexing"});
-		swearBox.add(new String[]{"Mother", "pancake-"});
+		swearBox.add(new String[]{"Mother", "pancake"});
 	}
 	public ArrayList<String[]> swears() {
 		return swearBox;
