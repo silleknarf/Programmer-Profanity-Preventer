@@ -1,6 +1,6 @@
 Programmer Profanity Preventer
 
-A tool that automatically replaces swearing from the source code files in a directory with something from a more appropriate word.
+A tool that automatically replaces swearing from the source code files in a directory with more appropriate words.
 
 Feature Requests:
 
