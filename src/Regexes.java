@@ -18,7 +18,7 @@ import java.util.regex.*;
 public class Regexes {
 
 	public Boolean isSource(String src) {
-		String[] srcSuffixes = new String[]{"java","py","v","xml"};
+		String[] srcSuffixes = new String[]{"java","py","v","xml","c","h","pl","html","php","css","js","hs","sql","m","mat","rb","cpp","cs","sh","as","scpt"};
 		boolean found = false;
 		for (String suf : srcSuffixes) {
 			Pattern pattern = Pattern.compile(".+?\\."+suf+"$");
