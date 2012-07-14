@@ -87,13 +87,22 @@ public class Main extends JFrame implements ActionListener {
 		}
 	}
     public static void main(String[] args) {
-        //Schedule a job for the event dispatch thread:
-        //creating and showing this application's GUI.
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                new Main();
-            }
-        });
+		
+		if (args.length == 1) {
+			
+			Regexes reg = new Regexes();
+			String output = reg.replaceAllSwears(args[0]);
+			System.out.println(output);
+		
+		} else {
+			// Schedule a job for the event dispatch thread:
+			// Open the GUI to pick a file
+			SwingUtilities.invokeLater(new Runnable() {
+				public void run() {
+					new Main();
+				}
+			}); 
+		}
     }
 	
 	public void actionPerformed(ActionEvent e) {
