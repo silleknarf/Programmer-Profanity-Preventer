@@ -1,7 +1,7 @@
 Programmer Profanity Preventer
 ==============================
 
-A (mainly) just-for-fun tool that automatically replaces swearing from the source code files in a directory with more appropriate words. Loosely based on the observations about the amount of swearing in the linux kernel - see [article] (http://durak.org/sean/pubs/kfc/) for details.
+A (mainly) just-for-fun tool that automatically replaces swearing from the source code files in a directory with more appropriate words. Inspired by the observations about the amount of swearing in the linux kernel - see [article] (http://durak.org/sean/pubs/kfc/) for details.
 
 Features:
 =========
