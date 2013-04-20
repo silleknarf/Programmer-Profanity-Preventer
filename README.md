@@ -1,8 +1,16 @@
 Programmer Profanity Preventer
 
-A tool that automatically replaces swearing from the source code files in a directory with more appropriate words.
+A (mainly) just-for-fun tool that automatically replaces swearing from the source code files in a directory with more appropriate words. Loosely based on the observations about the amount of swearing in the linux kernel - see [article] (http://durak.org/sean/pubs/kfc/) for details.
 
-Feature Requests:
+Features:
+* Recursively traverses a file directory and removes swearing from code files
+* Replaces each term with a move appropriate word
+
+Usage:
+
+```java -jar PPP.jar```
+
+TODO:
 
 * Add the option for the user to change the swear replacement dictionary
 * Move the UI stuff to a separate class
@@ -11,7 +19,5 @@ Feature Requests:
 
 Limitations:
 
-* Only checks the file extensions java, .py, .v, .xml, .c, .h, .pl, .html, .php, .css, .js, .hs, .sql, .m, .mat, .rb, .cpp, .cs, .sh, .as, .scpt
 * Only replaces based on the words and replacements currently defined in the source
-
-WARNING: DO NOT RUN THE PROGRAM ON ITS OWN SOURCE!
+* No facility for ignoring specific files is offered
