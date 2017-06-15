@@ -15,37 +15,44 @@ along with Programmer Profanity Preventer.  If not, see <http://www.gnu.org/lice
 
 import java.util.regex.*;
 
-public class Regexes {
-
-	public Boolean isSource(String src) {
+public class Regexes 
+{
+	public Boolean isSource(String src) 
+	{
 		String[] srcSuffixes = new String[]{"java","py","v","xml","c","h","pl","html","php","css","js","hs","sql","m","mat","rb","cpp","cs","sh","as","scpt"};
 		boolean found = false;
-		for (String suf : srcSuffixes) {
+		for (String suf : srcSuffixes) 
+		{
 			Pattern pattern = Pattern.compile(".+?\\."+suf+"$");
 			Matcher matcher = pattern.matcher(src);
-	        while (matcher.find()) {
-	            found = true;
-	        }
+			while (matcher.find()) 
+			{
+			    found = true;
+			}
 		}
 		return found;
 	}
-	public String replaceAllSwears(String str) {
-		
+	
+	public String replaceAllSwears(String str) 
+	{	
 		SwearBox swears = new SwearBox();
-		for (String[] swear : swears.swears()) {
+		for (String[] swear : swears.swears()) 
+		{
 			str = replaceSwears(str, swear).toString();
 		}
 		return str;
 	}
-	public StringBuffer replaceSwears(String str, String[] swear) {
+	
+	public StringBuffer replaceSwears(String str, String[] swear) 
+	{
 		StringBuffer myStringBuffer = new StringBuffer();
 		Pattern toReplace = Pattern.compile(swear[0], Pattern.CASE_INSENSITIVE);
 		Matcher myMatcher = toReplace.matcher(str);
-		while (myMatcher.find()) {
+		while (myMatcher.find()) 
+		{
 		    myMatcher.appendReplacement(myStringBuffer, swear[1]);
 		}
-		return myMatcher.appendTail(myStringBuffer);
 		
+		return myMatcher.appendTail(myStringBuffer);
 	}
-	
 }
