@@ -19,7 +19,8 @@ import java.util.ArrayList;
 public class SwearBox {
 
 	ArrayList<String[]> swearBox = new ArrayList<String[]>();
-	public SwearBox() {
+	public SwearBox()
+	{
 		swearBox.add(new String[]{"Fuck", "flip"});
 		// Add your own swear replacements here
 	}
