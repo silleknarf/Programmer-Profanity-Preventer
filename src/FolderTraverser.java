@@ -16,40 +16,40 @@ along with Programmer Profanity Preventer.  If not, see <http://www.gnu.org/lice
 import java.io.File;
 import java.util.ArrayList;
 
-
 public class FolderTraverser {
 
-	
-    private File fileObject;
-    Regexes reg = new Regexes();
-    ArrayList<File> srcFiles = new ArrayList<File>();
-    
-    public FolderTraverser(File fileObject)
-    {
-        this.fileObject = fileObject;
-    }
+	private File fileObject;
+	Regexes reg = new Regexes();
+	ArrayList<File> srcFiles = new ArrayList<File>();
 
-    public File[] traverse()
-    {
-       recursiveTraversal(fileObject);
-       File[] srcArray = new File[srcFiles.size()];
-       return srcFiles.toArray(srcArray);
-    }
-	
+	public FolderTraverser(File fileObject)
+	{
+		this.fileObject = fileObject;
+	}
 
-    public void recursiveTraversal(File fileObject){	
-    	
-        if (fileObject.isDirectory()){
-            //System.out.println(fileObject.getName());
-            File allFiles[] = fileObject.listFiles();
-            if (allFiles != null) {
-	            for(File aFile : allFiles) {
-	                recursiveTraversal(aFile);
-	            }
-        }
-        }else if (fileObject.isFile()){
-        	if (reg.isSource(fileObject.getName()))
-        		srcFiles.add(fileObject);
-        }		
-    }	
+	public File[] traverse()
+	{
+		recursiveTraversal(fileObject);
+		File[] srcArray = new File[srcFiles.size()];
+		return srcFiles.toArray(srcArray);
+	}
+	
+	public void recursiveTraversal(File fileObject) 
+	{	
+		if (fileObject.isDirectory()) 
+		{
+			File allFiles[] = fileObject.listFiles();
+			if (allFiles != null) 
+			{
+				for (File aFile : allFiles) 
+				{
+					recursiveTraversal(aFile);
+				}
+			}
+		} 
+		else if (fileObject.isFile() && reg.isSource(fileObject.getName()))
+		{
+			srcFiles.add(fileObject);
+		}	
+	}
 }
