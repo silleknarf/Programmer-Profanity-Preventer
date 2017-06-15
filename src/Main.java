@@ -88,12 +88,12 @@ public class Main extends JFrame implements ActionListener {
 		if (e.getSource() == openButton) {
 			int returnVal = fc.showOpenDialog(Main.this);
 
-		    if (returnVal == JFileChooser.APPROVE_OPTION) {
-			replaceAllThatFuckingSwearing(fc.getSelectedFile());
-			System.exit(0);
-		    } else {
-			System.exit(0);
-		    }
+			if (returnVal == JFileChooser.APPROVE_OPTION) {
+				replaceAllThatFuckingSwearing(fc.getSelectedFile());
+				System.exit(0);
+			} else {
+				System.exit(0);
+			}
 		}
 	}
 	
