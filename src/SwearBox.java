@@ -16,15 +16,18 @@ along with Programmer Profanity Preventer.  If not, see <http://www.gnu.org/lice
 import java.util.ArrayList;
 
 
-public class SwearBox {
-
+public class SwearBox
+{
 	ArrayList<String[]> swearBox = new ArrayList<String[]>();
+	
 	public SwearBox()
 	{
 		swearBox.add(new String[]{"Fuck", "flip"});
 		// Add your own swear replacements here
 	}
-	public ArrayList<String[]> swears() {
+	
+	public ArrayList<String[]> swears() 
+	{
 		return swearBox;
 	}
 }
